@@ -7,7 +7,9 @@ import (
 )
 
 type UserRepository interface {
-	// implement later
+	CreateUser(user *domain.User) error
+	FindByEmail(email string) (*domain.User, error)
+	FindByID(id uuid.UUID) (*domain.User, error)
 }
 
 type userRepository struct {

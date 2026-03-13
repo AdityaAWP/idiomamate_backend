@@ -11,6 +11,7 @@ import (
 type Config struct {
 	Database DatabaseConfig `mapstructure:"database"`
 	Server   ServerConfig   `mapstructure:"server"`
+	JWT      JWTConfig      `mapstructure:"jwt"`
 }
 
 type DatabaseConfig struct {
